@@ -1,13 +1,9 @@
-from enum import Enum
-
-from fastapi import FastAPI, Request
+from fastapi import Request
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
-from config import openapi_url, docs_url, redoc_url
-
-
-app = FastAPI(openapi_url=openapi_url, docs_url=docs_url, redoc_url=redoc_url)
+from loader import app
+import api
 app.mount("/static", StaticFiles(directory="webapp/static"), name="static")
 
 #templates = Jinja2Templates(directory="templates") 

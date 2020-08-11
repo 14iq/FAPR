@@ -1,8 +1,8 @@
 hide_docs = False
 
-openapi_url = "/openapi.json"
-docs_url = "/docs"
-redoc_url = "/redoc"
+openapi_url = "/api/openapi.json"
+docs_url = "/api/docs"
+redoc_url = "/api/redoc"
 
 if hide_docs:
     openapi_url = None
